@@ -1,0 +1,726 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"); /* Añadido: Importación de Google Fonts para Inter y Outfit */
+/* Añadido: Nuevo color gris claro para fondos sutiles */
+/* Añadido: Color de acento para botones o enlaces importantes */
+/* Añadido: Nueva variable para la fuente de los títulos */
+/* Añadido: Estilos generales para el body y reseteo básico */
+body {
+  font-family: "Inter", "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Añadido: Asegura que el padding y border se incluyan en el ancho/alto total */
+  line-height: 1.6; /* Añadido: Mejora la legibilidad del texto */
+  color: #121417; /* Añadido: Color de texto por defecto */
+  background-color: #ffffff; /* Añadido: Fondo blanco para el body */
+}
+
+/* Añadido: Estilos para enlaces */
+a {
+  text-decoration: none; /* Añadido: Elimina el subrayado de los enlaces */
+  color: inherit; /* Añadido: Hereda el color del texto del padre por defecto */
+}
+
+/* Añadido: Estilos para imágenes responsivas */
+img {
+  max-width: 100%; /* Añadido: Las imágenes no desbordarán su contenedor */
+  height: auto; /* Añadido: Mantiene la proporción de la imagen */
+  display: block; /* Añadido: Elimina el espacio extra debajo de las imágenes */
+}
+
+/* Añadido: Estilos para encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Outfit", sans-serif; /* Añadido: Aplica la fuente de títulos */
+  color: #121417; /* Añadido: Color para los títulos */
+  margin-top: 1.5em; /* Añadido: Espaciado superior para títulos */
+  margin-bottom: 0.8em; /* Añadido: Espaciado inferior para títulos */
+}
+
+section {
+  padding: 40px 20px; /* Ajustado: Mayor padding vertical para secciones */
+  max-width: 1200px; /* Añadido: Limita el ancho máximo de las secciones para mejor legibilidad */
+  margin: 0 auto; /* Añadido: Centra las secciones en la página */
+}
+
+body header {
+  padding: 15px 40px;
+  border-bottom: 1px solid #e0e0e0; /* Cambiado: Un borde más suave */
+  background-color: #ffffff; /* Añadido: Fondo blanco para el header */
+  position: sticky; /* Añadido: Header pegajoso al hacer scroll */
+  top: 0; /* Añadido: Se pega en la parte superior */
+  z-index: 1000; /* Añadido: Asegura que el header esté por encima de otros elementos */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Añadido: Sombra sutil para el header */
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Añadido: Centra verticalmente los elementos de la nav */
+  max-width: 1200px; /* Añadido: Limita el ancho de la navegación */
+  margin: 0 auto; /* Añadido: Centra la navegación */
+}
+body header nav a {
+  color: #121417;
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para el nombre del logo */
+  font-size: 1.5rem; /* Añadido: Tamaño de fuente para el nombre */
+  font-weight: 700; /* Añadido: Peso de fuente para el nombre */
+}
+body header nav a img {
+  height: 100px;
+  /* Considera un logo más pequeño para un diseño más elegante */
+}
+body header nav ul {
+  display: flex;
+  gap: 30px; /* Ajustado: Mayor espacio entre elementos del menú */
+  list-style: none; /* Añadido: Quita los puntos de la lista */
+  margin: 0; /* Añadido: Elimina el margen por defecto de la lista */
+  padding: 0; /* Añadido: Elimina el padding por defecto de la lista */
+}
+body header nav ul li {
+  color: #121417;
+  font-weight: 500; /* Añadido: Peso de fuente para los ítems del menú */
+  transition: color 0.3s ease; /* Añadido: Transición suave al pasar el ratón */
+}
+body header nav ul li:hover { /* Añadido: Estilo al pasar el ratón por los ítems del menú */
+  color: #007bff;
+}
+body header nav ul li a {
+  color: #fff;
+  background-color: #121417; /* Cambiado: Usa el color primario */
+  padding: 10px 18px; /* Ajustado: Padding para el botón */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añadido: Transición para el botón */
+  font-weight: 600; /* Añadido: Peso de fuente para el botón */
+}
+body header nav ul li a:hover { /* Añadido: Estilo al pasar el ratón por el botón */
+  background-color: black; /* Añadido: Oscurece el color al pasar el ratón */
+  transform: translateY(-2px); /* Añadido: Efecto de levantamiento al pasar el ratón */
+}
+body section.intro {
+  padding-top: 60px; /* Añadido: Más espacio superior */
+  padding-bottom: 60px; /* Añadido: Más espacio inferior */
+  display: flex; /* Añadido: Usa flexbox para alinear contenido */
+  flex-direction: column; /* Añadido: Disposición en columna */
+  align-items: center; /* Añadido: Centra los elementos horizontalmente */
+  text-align: center; /* Añadido: Centra el texto */
+}
+body section.intro .front {
+  height: 350px;
+  width: 100%;
+  background: linear-gradient(135deg, #121417, #4b5563); /* Añadido: Degradado de fondo */
+  border-radius: 15px; /* Añadido: Bordes redondeados */
+  margin-bottom: 30px; /* Añadido: Espacio debajo de la imagen principal */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Añadido: Sombra para el banner */
+  max-width: 900px; /* Añadido: Limita el ancho del banner */
+}
+body section.intro .intro {
+  padding: 0; /* Eliminado el padding redundante */
+  max-width: 800px; /* Añadido: Limita el ancho del texto de introducción */
+}
+body section.intro .intro h2 {
+  font-size: 2.5rem; /* Ajustado: Tamaño de fuente más grande para el título principal */
+  font-weight: 700;
+  color: #121417; /* Añadido: Color específico para el h2 */
+  margin-bottom: 20px; /* Añadido: Espacio debajo del título */
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para el título H2 */
+}
+body section.intro .intro p {
+  font-size: 1.1rem; /* Ajustado: Tamaño de fuente para párrafos */
+  line-height: 1.8; /* Ajustado: Mayor interlineado para legibilidad */
+  margin-bottom: 1em; /* Añadido: Espacio entre párrafos */
+  color: rgb(51.5853658537, 57.3170731707, 65.9146341463); /* Añadido: Color de texto ligeramente más claro */
+}
+body section.intro .intro p strong {
+  color: #121417; /* Añadido: Resalta el color de los strong */
+}
+body section.portfolio {
+  background-color: #f5f5f5; /* Añadido: Fondo gris claro para la sección */
+  border-radius: 15px; /* Añadido: Bordes redondeados */
+  padding: 60px 40px; /* Ajustado: Mayor padding */
+  margin-top: 50px; /* Añadido: Espacio superior */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Añadido: Sombra sutil */
+}
+body section.portfolio .view-title {
+  font-size: 2rem; /* Ajustado: Tamaño de fuente para títulos de sección */
+  font-weight: 700;
+  text-align: center; /* Añadido: Centra el título */
+  margin-bottom: 40px; /* Añadido: Espacio debajo del título */
+  color: #121417; /* Añadido: Color para el título */
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para el título */
+}
+body section.portfolio .main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; /* Añadido: Espacio debajo de la información principal */
+}
+body section.portfolio .main-info img {
+  width: 180px; /* Ajustado: Tamaño más compacto para la imagen */
+  height: 180px; /* Ajustado: Tamaño más compacto para la imagen */
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  border: 4px solid #007bff; /* Añadido: Borde de acento alrededor de la imagen */
+  box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.2); /* Añadido: Anillo de sombra para destacar */
+}
+body section.portfolio .main-info h4 {
+  font-size: 1.8rem; /* Añadido: Tamaño de fuente para el nombre */
+  margin-top: 20px; /* Añadido: Espacio superior */
+  margin-bottom: 5px; /* Añadido: Espacio inferior */
+  color: #121417; /* Añadido: Color para el nombre */
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para el nombre */
+}
+body section.portfolio .main-info p {
+  font-size: 1.1rem; /* Añadido: Tamaño de fuente para los detalles */
+  color: #4b5563; /* Añadido: Color más suave para los detalles */
+  margin-bottom: 5px; /* Añadido: Espacio inferior */
+}
+body section.portfolio h3 {
+  font-size: 1.8rem; /* Ajustado: Tamaño de fuente para sub-títulos */
+  font-weight: 600;
+  margin-top: 30px; /* Añadido: Espacio superior */
+  margin-bottom: 20px; /* Añadido: Espacio inferior */
+  color: #121417; /* Añadido: Color para el título */
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para el título */
+}
+body section.portfolio p {
+  font-size: 1rem; /* Añadido: Tamaño de fuente para párrafos */
+  line-height: 1.7; /* Añadido: Mejora la legibilidad */
+  margin-bottom: 20px; /* Añadido: Espacio inferior */
+  color: rgb(51.5853658537, 57.3170731707, 65.9146341463); /* Añadido: Color de texto ligeramente más claro */
+}
+body section.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado: Grid responsivo */
+  gap: 20px;
+  margin-top: 30px; /* Añadido: Espacio superior para el grid */
+}
+body section.portfolio .grid .skill-item {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Ajustado: Sombra más pronunciada y oscura */
+  border-radius: 12px; /* Ajustado: Bordes más redondeados */
+  padding: 1.5rem; /* Ajustado: Mayor padding interno */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px; /* Ajustado: Espacio entre icono y texto */
+  background-color: #ffffff; /* Añadido: Fondo blanco para los items de skill */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido: Transición para interactividad */
+}
+body section.portfolio .grid .skill-item:hover { /* Añadido: Efecto al pasar el ratón */
+  transform: translateY(-5px); /* Añadido: Ligero levantamiento */
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12); /* Añadido: Sombra más pronunciada al pasar el ratón */
+}
+body section.portfolio .grid .skill-item img {
+  width: 35px; /* Ajustado: Iconos un poco más grandes */
+  height: 35px; /* Añadido: Altura fija para iconos */
+  object-fit: contain; /* Añadido: Asegura que el icono quepa sin distorsión */
+}
+body section.portfolio .grid .skill-item p {
+  font-size: 1.1rem; /* Ajustado: Tamaño de fuente para el texto de habilidad */
+  line-height: 1.4;
+  text-align: start;
+  margin: 0; /* Añadido: Elimina márgenes por defecto del párrafo */
+  font-weight: 500; /* Añadido: Peso de fuente para el texto de habilidad */
+  color: #121417; /* Añadido: Color de texto para la habilidad */
+}
+body section.stack {
+  padding-top: 60px; /* Añadido: Espacio superior */
+  padding-bottom: 60px; /* Añadido: Espacio inferior */
+}
+body section.stack h2.view-title { /* Cambiado: Asegura que se aplique a view-title */
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #121417;
+  font-family: "Outfit", sans-serif;
+}
+body section.stack p {
+  text-align: center; /* Añadido: Centra el texto descriptivo */
+  max-width: 700px; /* Añadido: Limita el ancho del párrafo */
+  margin: 0 auto 50px auto; /* Añadido: Centra el párrafo y añade margen inferior */
+  font-size: 1.1rem; /* Añadido: Tamaño de fuente para el párrafo */
+  color: rgb(51.5853658537, 57.3170731707, 65.9146341463); /* Añadido: Color de texto ligeramente más claro */
+}
+body section.stack section.tech-group { /* Añadido: Selector más específico para evitar conflictos */
+  margin-bottom: 40px; /* Añadido: Espacio entre grupos de tecnologías */
+  background-color: #ffffff; /* Añadido: Fondo blanco para cada grupo */
+  padding: 30px; /* Añadido: Padding interno para cada grupo */
+  border-radius: 12px; /* Añadido: Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Añadido: Sombra sutil */
+}
+body section.stack section.tech-group h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center; /* Añadido: Centra los sub-títulos de grupo */
+  margin-bottom: 30px; /* Añadido: Espacio debajo del título del grupo */
+  color: #007bff; /* Añadido: Color de acento para los títulos de grupo */
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para los títulos de grupo */
+}
+body section.stack section.tech-group .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustado: Grid más adaptable */
+  gap: 20px;
+}
+body section.stack section.tech-group .grid article {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05); /* Ajustado: Sombra más ligera */
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* Cambiado: Disposición en columna para icono y texto */
+  text-align: center;
+  align-items: center;
+  gap: 10px; /* Ajustado: Espacio entre icono y texto */
+  background-color: #f5f5f5; /* Añadido: Fondo gris claro para las tarjetas de tecnología */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido: Transición para interactividad */
+}
+body section.stack section.tech-group .grid article:hover { /* Añadido: Efecto al pasar el ratón */
+  transform: translateY(-3px); /* Añadido: Ligero levantamiento */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Añadido: Sombra más pronunciada al pasar el ratón */
+}
+body section.stack section.tech-group .grid article img {
+  width: 45px; /* Ajustado: Iconos de tecnología más grandes */
+  height: 45px; /* Añadido: Altura fija */
+  object-fit: contain;
+  margin-bottom: 0.5rem; /* Ajustado: Espacio debajo de la imagen */
+}
+body section.stack section.tech-group .grid article p {
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: center; /* Centrado para disposición en columna */
+  margin: 0; /* Añadido: Elimina márgenes por defecto del párrafo */
+  font-weight: 500; /* Añadido: Peso de fuente para el texto de tecnología */
+  color: #121417; /* Añadido: Color de texto para la tecnología */
+}
+body section.services,
+body section.certifications,
+body section.experience,
+body section.projects {
+  padding-top: 60px; /* Añadido: Padding consistente */
+  padding-bottom: 60px; /* Añadido: Padding consistente */
+  text-align: center; /* Añadido: Centra el contenido de estas secciones */
+}
+body section.services .view-title,
+body section.certifications .view-title,
+body section.experience .view-title,
+body section.projects .view-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #121417;
+  font-family: "Outfit", sans-serif;
+}
+body section.services .container,
+body section.certifications .container,
+body section.experience .container,
+body section.projects .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Añadido: Grid responsivo */
+  gap: 30px; /* Añadido: Espacio entre los artículos */
+  justify-content: center; /* Añadido: Centra los elementos en el grid */
+  margin-top: 30px; /* Añadido: Espacio superior para el contenedor */
+}
+body section.services .container article,
+body section.certifications .container article,
+body section.experience .container article,
+body section.projects .container article {
+  background-color: #ffffff; /* Añadido: Fondo blanco para los artículos */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px; /* Añadido: Padding interno */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido: Transición para interactividad */
+  display: flex; /* Añadido: Usa flexbox para el contenido del artículo */
+  flex-direction: column; /* Añadido: Contenido en columna */
+  align-items: center; /* Añadido: Centra el contenido */
+  text-align: center; /* Añadido: Centra el texto */
+}
+body section.services .container article:hover,
+body section.certifications .container article:hover,
+body section.experience .container article:hover,
+body section.projects .container article:hover {
+  transform: translateY(-8px); /* Añadido: Efecto de levantamiento más pronunciado */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Añadido: Sombra más pronunciada */
+}
+body section.services .container article img,
+body section.certifications .container article img,
+body section.experience .container article img,
+body section.projects .container article img {
+  width: 80px; /* Añadido: Tamaño para imágenes de certificaciones/experiencia */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 8px; /* Añadido: Bordes redondeados para las imágenes */
+}
+body section.services .container article h4,
+body section.certifications .container article h4,
+body section.experience .container article h4,
+body section.projects .container article h4 {
+  font-size: 1.5rem; /* Añadido: Tamaño para títulos de proyectos */
+  margin-bottom: 10px; /* Añadido: Espacio debajo del título */
+  color: #121417;
+  font-family: "Outfit", sans-serif;
+}
+body section.services .container article p,
+body section.certifications .container article p,
+body section.experience .container article p,
+body section.projects .container article p {
+  font-size: 1rem; /* Añadido: Tamaño para descripciones */
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+body section.services .container article a,
+body section.certifications .container article a,
+body section.experience .container article a,
+body section.projects .container article a {
+  display: inline-block; /* Añadido: Para aplicar padding y margen al enlace */
+  background-color: #007bff; /* Añadido: Color de acento para el botón */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añadido: Transición para el botón */
+}
+body section.services .container article a:hover,
+body section.certifications .container article a:hover,
+body section.experience .container article a:hover,
+body section.projects .container article a:hover {
+  background-color: rgb(0, 98.4, 204); /* Añadido: Oscurece al pasar el ratón */
+  transform: translateY(-2px);
+}
+body section.services .container article .role,
+body section.certifications .container article .role,
+body section.experience .container article .role,
+body section.projects .container article .role {
+  font-size: 1.2rem; /* Añadido: Tamaño para el rol */
+  font-weight: 600;
+  color: #121417;
+  margin-bottom: 5px;
+}
+body section.services .container article .company,
+body section.certifications .container article .company,
+body section.experience .container article .company,
+body section.projects .container article .company {
+  font-size: 1rem; /* Añadido: Tamaño para la compañía */
+  color: #4b5563;
+  margin-bottom: 15px;
+}
+body section.contact {
+  background-color: #121417; /* Añadido: Fondo oscuro para la sección de contacto */
+  color: #ffffff; /* Añadido: Texto blanco */
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 15px; /* Añadido: Bordes redondeados */
+  margin-top: 50px; /* Añadido: Espacio superior */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Añadido: Sombra */
+}
+body section.contact p {
+  font-size: 2rem; /* Añadido: Tamaño de fuente para el CTA */
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Outfit", sans-serif; /* Añadido: Fuente para el CTA */
+}
+body section.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Añadido: Espacio entre los campos del formulario */
+  max-width: 500px; /* Añadido: Limita el ancho del formulario */
+  margin: 0 auto; /* Añadido: Centra el formulario */
+}
+body section.contact form input[type=text],
+body section.contact form input[type=email],
+body section.contact form textarea {
+  padding: 15px; /* Añadido: Padding para los campos */
+  border: 1px solid #4b5563; /* Añadido: Borde para los campos */
+  border-radius: 8px;
+  background-color: rgb(29.1951219512, 32.4390243902, 37.3048780488); /* Añadido: Fondo ligeramente más claro para los campos */
+  color: #ffffff; /* Añadido: Color de texto en los campos */
+  font-family: "Inter", "Noto Sans", sans-serif; /* Añadido: Fuente para los campos */
+  font-size: 1rem; /* Añadido: Tamaño de fuente para los campos */
+  outline: none; /* Añadido: Elimina el contorno al enfocar */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Añadido: Transición para interactividad */
+}
+body section.contact form input[type=text]::placeholder,
+body section.contact form input[type=email]::placeholder,
+body section.contact form textarea::placeholder { /* Añadido: Estilo para el placeholder */
+  color: #4b5563;
+}
+body section.contact form input[type=text]:focus,
+body section.contact form input[type=email]:focus,
+body section.contact form textarea:focus { /* Añadido: Estilo al enfocar el campo */
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+body section.contact form textarea {
+  resize: vertical; /* Añadido: Permite redimensionar verticalmente el textarea */
+  min-height: 100px; /* Añadido: Altura mínima para el textarea */
+}
+body section.contact form button[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem; /* Añadido: Tamaño de fuente para el botón */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añadido: Transición para el botón */
+}
+body section.contact form button[type=submit]:hover {
+  background-color: rgb(0, 98.4, 204);
+  transform: translateY(-3px);
+}
+
+/* Añadido: Media queries para responsividad */
+@media (max-width: 768px) {
+  body header {
+    padding: 10px 20px; /* Ajustado: Menor padding en móviles */
+  }
+  body header nav {
+    flex-direction: column; /* Añadido: Elementos de la nav en columna */
+    gap: 15px; /* Añadido: Espacio entre elementos de la nav */
+  }
+  body header nav ul {
+    gap: 15px; /* Ajustado: Menor espacio entre ítems del menú */
+    flex-wrap: wrap; /* Añadido: Permite que los ítems del menú se envuelvan */
+    justify-content: center; /* Añadido: Centra los ítems del menú */
+  }
+  body header nav ul li a {
+    padding: 8px 15px; /* Ajustado: Menor padding para el botón */
+  }
+  body section {
+    padding: 30px 15px; /* Ajustado: Menor padding en secciones */
+  }
+  body section.intro .intro h2 {
+    font-size: 2rem; /* Ajustado: Tamaño de fuente más pequeño para el h2 */
+  }
+  body section.intro .intro p {
+    font-size: 1rem; /* Ajustado: Tamaño de fuente más pequeño para los párrafos */
+  }
+  body section.portfolio .view-title,
+  body section.stack .view-title {
+    font-size: 1.8rem; /* Ajustado: Tamaño de fuente más pequeño para títulos de sección */
+  }
+  body section.portfolio .grid,
+  body section.stack .grid {
+    grid-template-columns: 1fr; /* Añadido: Una columna en móviles */
+  }
+  body section.portfolio h3,
+  body section.stack h3 {
+    font-size: 1.5rem; /* Ajustado: Tamaño de fuente más pequeño para sub-títulos */
+  }
+  body section.portfolio .skill-item,
+  body section.portfolio .tech-group article,
+  body section.stack .skill-item,
+  body section.stack .tech-group article {
+    flex-direction: row; /* Añadido: Vuelve a disposición en fila para skills/tech */
+    text-align: left; /* Añadido: Alineación de texto a la izquierda */
+    justify-content: flex-start; /* Añadido: Alinea al inicio */
+  }
+  body section.portfolio .skill-item img,
+  body section.portfolio .tech-group article img,
+  body section.stack .skill-item img,
+  body section.stack .tech-group article img {
+    margin-bottom: 0; /* Añadido: Elimina margen inferior */
+  }
+  body section.contact p {
+    font-size: 1.5rem; /* Ajustado: Tamaño de fuente más pequeño para el CTA */
+  }
+  body section.contact form {
+    gap: 15px; /* Ajustado: Menor espacio entre campos */
+  }
+}
+@media (max-width: 480px) {
+  body header nav a {
+    font-size: 1.2rem; /* Ajustado: Tamaño de fuente para el logo */
+  }
+  body section.intro .intro h2 {
+    font-size: 1.8rem; /* Ajustado: Tamaño de fuente más pequeño para el h2 de intro */
+  }
+}
+@media (max-width: 1150px) { /* Añadido: Media query para el breakpoint */
+  body header nav.navbar { /* Añadido: Estilos para la barra de navegación en móviles */
+    justify-content: space-between;
+    padding: 15px 20px; /* Ajustado: Padding para barra en móviles */
+  }
+  body header nav.navbar .logo { /* Añadido: Estilos para el logo en móviles */
+    font-size: 1.3rem;
+  }
+  body header nav.navbar .hamburger-menu { /* Añadido: Estilos para el botón de hamburguesa */
+    display: flex; /* Añadido: Hace visible el botón de hamburguesa */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Añadido: Asegura que esté sobre el menú */
+  }
+  body header nav.navbar .hamburger-menu:focus { /* Añadido: Elimina el contorno de enfoque por defecto */
+    outline: none;
+  }
+  body header nav.navbar .hamburger-menu .bar { /* Añadido: Estilos para las barras de la hamburguesa */
+    width: 100%;
+    height: 3px;
+    background-color: #121417;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Añadido: Transición para la animación */
+  }
+  body header nav.navbar .hamburger-menu.open .bar:nth-child(1) { /* Añadido: Primera barra para animación de cruz */
+    transform: translateY(11px) rotate(45deg);
+  }
+  body header nav.navbar .hamburger-menu.open .bar:nth-child(2) { /* Añadido: Segunda barra para animación de cruz */
+    opacity: 0;
+  }
+  body header nav.navbar .hamburger-menu.open .bar:nth-child(3) { /* Añadido: Tercera barra para animación de cruz */
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  body header nav.navbar ul.nav-links { /* Añadido: Estilos para la lista de enlaces en móviles */
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Añadido: Posicionamiento absoluto para el menú desplegable */
+    top: 0; /* Añadido: Posiciona el menú en la parte superior */
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Añadido: Ocupa toda la altura de la ventana */
+    background-color: rgba(18, 20, 23, 0.98); /* Añadido: Fondo oscuro semitransparente para el menú */
+    padding: 80px 20px 20px; /* Ajustado: Padding para dejar espacio al logo/hamburguesa */
+    list-style: none;
+    justify-content: flex-start; /* Añadido: Alinea los ítems al principio */
+    align-items: center; /* Añadido: Centra los ítems horizontalmente */
+    transform: translateY(-100%); /* Añadido: Oculta el menú por defecto arriba de la pantalla */
+    transition: transform 0.4s ease-in-out; /* Añadido: Transición suave para el despliegue */
+    z-index: 1000; /* Añadido: Asegura que el menú esté debajo de la hamburguesa */
+    overflow-y: auto; /* Añadido: Permite scroll si hay muchos elementos */
+  }
+  body header nav.navbar ul.nav-links.open { /* Añadido: Muestra el menú cuando tiene la clase 'open' */
+    transform: translateY(0);
+  }
+  body header nav.navbar ul.nav-links li {
+    margin: 15px 0; /* Añadido: Espacio entre ítems del menú */
+    font-size: 1.5rem; /* Añadido: Tamaño de fuente más grande para los ítems */
+    font-weight: 600; /* Añadido: Peso de fuente para los ítems */
+  }
+  body header nav.navbar ul.nav-links li a {
+    color: #ffffff; /* Añadido: Color de texto blanco para los enlaces */
+    padding: 10px 0; /* Ajustado: Padding para los enlaces */
+    background-color: transparent; /* Añadido: Fondo transparente para enlaces */
+    border-radius: 0; /* Añadido: Quita bordes redondeados */
+  }
+  body header nav.navbar ul.nav-links li a:hover { /* Añadido: Efecto hover para los enlaces */
+    color: #007bff;
+    background-color: transparent;
+    transform: none; /* Añadido: Resetea la transformación en hover */
+  }
+  body header nav.navbar ul.nav-links li .btn-resume { /* Añadido: Estilos para el botón de Resume dentro del menú */
+    background-color: #007bff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin-top: 10px; /* Añadido: Espacio superior para el botón */
+  }
+  body header nav.navbar ul.nav-links li .btn-resume:hover {
+    background-color: rgb(0, 98.4, 204);
+    color: #fff; /* Asegura el color de texto blanco */
+  }
+}
+@media (min-width: 1151px) { /* Añadido: Media query para desktop */
+  body header nav.navbar .hamburger-menu { /* Añadido: Oculta el botón de hamburguesa en desktop */
+    display: none;
+  }
+  body header nav.navbar ul.nav-links { /* Añadido: Muestra el menú de navegación completo en desktop */
+    display: flex;
+    position: static; /* Añadido: Elimina posicionamiento absoluto */
+    transform: none; /* Añadido: Resetea la transformación */
+    height: auto; /* Añadido: Altura automática */
+    background-color: transparent; /* Añadido: Fondo transparente */
+    padding: 0; /* Añadido: Quita padding extra */
+  }
+  body header nav.navbar ul.nav-links li {
+    margin: 0; /* Añadido: Resetea el margen de los ítems de lista */
+    font-size: initial; /* Añadido: Resetea el tamaño de fuente */
+    font-weight: initial; /* Añadido: Resetea el peso de fuente */
+  }
+  body header nav.navbar ul.nav-links li a {
+    color: #121417; /* Añadido: Color de texto normal para enlaces */
+  }
+  body header nav.navbar ul.nav-links li a:hover {
+    color: #007bff;
+  }
+  body header nav.navbar ul.nav-links li .btn-resume {
+    background-color: #121417; /* Añadido: Vuelve al color original del botón */
+    color: #fff;
+  }
+  body header nav.navbar ul.nav-links li .btn-resume:hover {
+    background-color: black;
+  }
+}
+footer {
+  background-color: #121417; /* Fondo negro */
+  color: #ffffff; /* Letras blancas */
+  padding: 40px 20px;
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  /* Estilos específicos para cada sección del footer */
+  /* Media query para pantallas más pequeñas (ej. móviles) */
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid adaptable */
+  gap: 30px;
+}
+footer h3 {
+  font-family: "Outfit", sans-serif; /* Fuente para los títulos */
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer li {
+  margin-bottom: 8px;
+}
+footer a {
+  color: #cccccc; /* Color de enlace ligeramente más claro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #007bff; /* Color de acento al pasar el ratón */
+}
+footer p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+footer .footer-contact p:last-child {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #999;
+}
+footer .footer-nav,
+footer .footer-social,
+footer .footer-contact {
+  text-align: left; /* Alineación del texto a la izquierda en cada bloque */
+}
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr; /* Apila las columnas en pantallas pequeñas */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+  footer .footer-nav,
+  footer .footer-social,
+  footer .footer-contact {
+    margin-bottom: 30px; /* Añade espacio entre los bloques en móviles */
+    text-align: center; /* Centra el texto en móviles */
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
