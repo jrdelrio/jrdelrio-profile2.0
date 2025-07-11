@@ -3,7 +3,41 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <!-- <link rel="icon" type="image/svg" href="../../public/favicon.svg" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>José Raimundo del Rio | Desarrollador Web Full-Stack</title>
+        <meta
+            name="description"
+            content="Portafolio de José Raimundo del Rio, desarrollador web full-stack y fundador de Chilisites. Sitios modernos, apps móviles y automatizaciones con IA."
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tudominio.com/" />
+        <meta
+            property="og:title"
+            content="José Raimundo del Rio | Desarrollador Web Full-Stack"
+        />
+        <meta
+            property="og:description"
+            content="Desarrollador full-stack con experiencia en React, Astro, Django y más. Fundador de Chilisites."
+        />
+        <meta property="og:image" content="/portrait.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="José Raimundo del Rio | Desarrollador Web Full-Stack"
+        />
+        <meta
+            name="twitter:description"
+            content="Portafolio de desarrollador fullstack y CTO de 🌶️Chilisites."
+        />
+        <meta name="twitter:image" content="/portrait.jpg" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <link
             rel="preconnect"
@@ -17,12 +51,14 @@
             href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
         />
 
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>   
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+        ></script>
         <title>jrdelrio - Profile</title>
     </head>
     <body>
         <slot />
-        <script type="module" src="/src/scripts/navbar.js" />
+        <script type="module" src="/src/scripts/navbar.js"></script>
     </body>
 </html>
 
