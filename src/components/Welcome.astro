@@ -11,7 +11,7 @@ import "../styles/styles.css";
                 const target = e.currentTarget as HTMLAnchorElement;
                 const targetId = target.getAttribute("href")?.substring(1);
                 if (!targetId) return;
-                const section = document.getElementById(targetId || '');
+                const section = document.getElementById(targetId || "");
                 section?.scrollIntoView({
                     behavior: "smooth",
                 });
@@ -36,20 +36,21 @@ import "../styles/styles.css";
             <!-- <li><a href="#contact">Contacto</a></li> -->
             <li>
                 <a
-                    href="/public/CV_JoseRaimundoDelRio.pdf"
+                    href="/CV_JoseRaimundoDelRio.pdf"
                     class="btn-resume"
                     download="CV_JoseRaimundoDelRio.pdf"
                     >CV <img
                         src="icons/download-cv.png"
                         alt="download icon"
-                    /></a>
+                    /></a
+                >
             </li>
         </ul>
     </nav>
 </header>
 <section class="intro">
     <!-- <div class="front"></div> -->
-    
+
     <div class="intro">
         <h2>Hola, soy José Raimundo del Rio 👋🏽</h2>
         <p>
@@ -243,7 +244,7 @@ import "../styles/styles.css";
     <h2 class="view-title">Servicios</h2>
     <div class="grid">
         <article>
-            <img src="/public/icons/responsive.png" alt="" srcset="" />
+            <img src="icons/responsive.png" alt="" srcset="" />
             <div class="info">
                 <h4>Desarrollo Web</h4>
                 <p>
@@ -254,7 +255,7 @@ import "../styles/styles.css";
             </div>
         </article>
         <article>
-            <img src="/public/icons/ecommerce.png" alt="" srcset="" />
+            <img src="icons/ecommerce.png" alt="" srcset="" />
             <div class="info">
                 <h4>E-commerce</h4>
                 <p>
@@ -265,7 +266,7 @@ import "../styles/styles.css";
             </div>
         </article>
         <article>
-            <img src="/public/icons/automation.png" alt="" srcset="" />
+            <img src="icons/automation.png" alt="" srcset="" />
             <div class="info">
                 <h4>SEO y Automatización</h4>
                 <p>
@@ -277,7 +278,7 @@ import "../styles/styles.css";
         </article>
 
         <article>
-            <img src="/public/icons/apps.png" alt="" srcset="" />
+            <img src="icons/apps.png" alt="" srcset="" />
             <div class="info">
                 <h4>Creación de APPs para Android y iOS</h4>
                 <p>
@@ -507,9 +508,10 @@ import "../styles/styles.css";
                 <!-- <li><a href="#contact">Contacto</a></li> -->
                 <li>
                     <a
-                        href="/public/CV_JoseRaimundoDelRio.pdf"
+                        href="/CV_JoseRaimundoDelRio.pdf"
                         class="btn-resume"
-                        download="CV_JoseRaimundoDelRio.pdf">CV</a>
+                        download="CV_JoseRaimundoDelRio.pdf">CV</a
+                    >
                 </li>
             </ul>
         </div>
