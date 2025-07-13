@@ -577,6 +577,7 @@ body section.contact form button[type=submit]:hover {
 }
 body section.sign {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 60px;
 }
@@ -585,9 +586,14 @@ body section.sign a {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
   scale: 1;
+  align-self: center;
 }
-body section.sign ahover {
+body section.sign a:hover {
   transform: scale(1.1);
+}
+body section.sign a img {
+  height: 200px;
+  filter: invert(1);
 }
 
 @media (max-width: 768px) {
@@ -688,6 +694,27 @@ body section.sign ahover {
   }
   body section.contact form {
     gap: 15px;
+  }
+  body section.sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    gap: 30px;
+  }
+  body section.sign a {
+    font-size: 2rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    scale: 1;
+    align-self: center;
+  }
+  body section.sign a:hover {
+    transform: scale(1.1);
+  }
+  body section.sign a img {
+    height: 100px;
+    filter: invert(1);
   }
 }
 @media (max-width: 480px) {

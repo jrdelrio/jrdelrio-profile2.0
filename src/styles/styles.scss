@@ -657,6 +657,7 @@ body {
     }
     section.sign {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         padding: 60px;
         a {
@@ -664,9 +665,15 @@ body {
             font-family: "Outfit", sans-serif;
             font-weight: 700;
             scale: 1;
+            align-self: center;
 
-            &hover {
+            &:hover {
                 transform: scale(1.1);
+            }
+
+            img {
+                height: 200px;
+                filter: invert(1);
             }
         }
     }
@@ -784,6 +791,30 @@ body {
             }
             form {
                 gap: 15px;
+            }
+        }
+
+        section.sign {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            gap: 30px;
+            a {
+                font-size: 2rem;
+                font-family: "Outfit", sans-serif;
+                font-weight: 700;
+                scale: 1;
+                align-self: center;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                img {
+                    height: 100px;
+                    filter: invert(1);
+                }
             }
         }
     }
