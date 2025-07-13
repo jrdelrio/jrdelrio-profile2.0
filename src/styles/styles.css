@@ -589,11 +589,15 @@ body section.sign a {
   align-self: center;
 }
 body section.sign a:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 body section.sign a img {
   height: 200px;
   filter: invert(1);
+  transition: transform 0.3s ease;
+}
+body section.sign a img:hover {
+  transform: scale(1.08);
 }
 
 @media (max-width: 768px) {

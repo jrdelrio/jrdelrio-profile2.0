@@ -668,12 +668,18 @@ body {
             align-self: center;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1);
             }
 
+            
             img {
                 height: 200px;
                 filter: invert(1);
+                transition: transform .3s ease;
+
+                &:hover {
+                    transform: scale(1.08);
+                }
             }
         }
     }
